@@ -6,7 +6,7 @@
   "status": true,
   "json": {
     "Main": {
-      "side_title": {
+      "site_title": {
         "type": "Text",
         "config": {
           "label": "Site Title",

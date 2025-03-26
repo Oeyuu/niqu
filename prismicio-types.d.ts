@@ -38,11 +38,11 @@ interface SettingsDocumentData {
    *
    * - **Field Type**: Text
    * - **Placeholder**: *None*
-   * - **API ID Path**: settings.side_title
+   * - **API ID Path**: settings.site_title
    * - **Tab**: Main
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
-  side_title: prismic.KeyTextField;
+  site_title: prismic.KeyTextField;
 
   /**
    * Meta Description field in *Settings*

@@ -1,6 +1,8 @@
 import { Geist, Geist_Mono, Raleway } from "next/font/google";
 import "@/app/styles/globals.css";
 import { createClient } from "@/prismicio";
+import Navbar from "@/app/components/Navbar";
+import Footer from "@/app/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,13 +22,13 @@ const raleway = Raleway({
 export async function generateMetadata() {
   const client = createClient();
 
-  const page = await client.getSingle("settings");
+  const settings = await client.getSingle("settings");
 
   return {
-    title: page.data.side_title,
-    description: page.data.meta_description,
+    title: settings.data.site_title,
+    description: settings.data.meta_description,
     openGraph: {
-      images: [page.data.og_image.url || ""],
+      images: [settings.data.og_image.url || ""],
     },
   }
 }
@@ -35,9 +37,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable} ${raleway.variable}`}>
-        <nav>Navigation!</nav>
+        <Navbar />
         {children}
-        <footer>Footer!</footer>
+        <Footer />
       </body>
     </html>
   );
