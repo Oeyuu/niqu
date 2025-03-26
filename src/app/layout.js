@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono, Raleway } from "next/font/google";
-import "@/styles/globals.css";
+import "@/app/styles/globals.css";
 import { createClient } from "@/prismicio";
 
 const geistSans = Geist({
