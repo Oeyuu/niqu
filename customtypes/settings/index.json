@@ -54,6 +54,33 @@
             }
           }
         }
+      },
+      "socials": {
+        "type": "Group",
+        "config": {
+          "label": "Socials",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null,
+                "allowTargetBlank": true,
+                "allowText": true,
+                "repeat": false
+              }
+            },
+            "iconname": {
+              "type": "Text",
+              "config": {
+                "label": "Iconname",
+                "placeholder": ""
+              }
+            }
+          }
+        }
       }
     }
   }
